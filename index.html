@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>はじめての React!</title>
+  </head>
+  <body>
+    <div class="page-header" >
+      <h1>ｃｈローカルチャット</h1>
+      <div id="container"><!-- この内容が置き換えられる --></div>
+    </div>
+    
+    <link href="//cdn.jsdelivr.net/bootwatch/3.3.7/yeti/bootstrap.min.css" rel="stylesheet">
+    <script arc="https://ajax.googleapis.com/ajax/libs/jquery.min.js"></script>
+    <script arc="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script arc="https://unpkg.com/react@15.3.2/dist/react.min.js"></script>
+    <script arc="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
+    <script arc="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.min.js"></script>
+    <script type="text/babel">
+      var CommentList = React.createClass({
+          render: function() {
+              var commnets = this.prop.comments.map(function(comment, index) {
+                  return <li className="list-group-item" key={index}>{comment}</li>;
+              });
+              return (
+                  <ul className="list-group">{comments}</ul>
+                  );
+              }
+       });
+  </body>
+</html>

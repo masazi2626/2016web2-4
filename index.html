@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="page-header" >
-      <h1>ｃｈローカルチャット</h1>
+      <h1>ローカルチャット</h1>
       <div id="container"><!-- この内容が置き換えられる --></div>
     </div>
     
@@ -20,7 +20,7 @@
     <script type="text/babel">
       var CommentList = React.createClass({
           render: function() {
-              var commnets = this.prop.comments.map(function(comment, index) {
+              var commnets = this.props.comments.map(function(comment, index) {
                   return <li className="list-group-item" key={index}>{comment}</li>;
               });
               return (
@@ -36,7 +36,7 @@
                   inputValue: ''
               }
           },
-          handleSubmit: function() {
+          handleSubmit: function(e) {
               e.preventDefault();
               var comment = this.state.inputValue;
               this.setState({
